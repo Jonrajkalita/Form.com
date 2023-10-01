@@ -16,6 +16,10 @@ body{
     padding: 20px;
 }
 
+select option {
+   background-color:#fff;
+}
+
 .container{
     position: relative;
     max-width: 700px;
