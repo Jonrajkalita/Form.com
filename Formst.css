@@ -42,7 +42,7 @@ body{
     margin-top: 20px;
  }
   input[type="date"]{
-   background-color: none;
+   background-color: #fff;
  }
  .input-box label{
     color: #333;
