@@ -11,36 +11,36 @@
     <section class="container">
         <header>Registation Form</header>
 
-        <form action="" method="post" class="form">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbxDfZZWkU_qhR0rJPK7EumVTiV9vsUrN4-usFgJP6n-s-PwZTH_h5ke8BEYbV9a3P1A/exec" name="google-sheet" class="form">
 
             <div class="colum">
         <div class="input-box">
             <label >First Name: </label>
-            <input type="text"  name="Name" placeholder="Enter Your First Name" required>
+            <input type="text"  name="First Name" placeholder="Enter Your First Name" required>
         </div>
         <div class="input-box">
             <label >Last Name: </label>
-            <input type="text"  name="Name" placeholder="Enter Your Last Name" required>
+            <input type="text"  name="Last Name" placeholder="Enter Your Last Name" required>
         </div>
         </div>
         <div class="input-box">
             <label >Email: </label>
-            <input type="email"  name="Name" placeholder="Enter Your Email" required>
+            <input type="email"  name="Email" placeholder="Enter Your Email" required>
         </div>
         <div class="column">
         <div class="input-box">
             <label >Phone No: </label>
-            <input type="number"  name="Name" placeholder="Enter Your Phone Number" required>
+            <input type="number"  name="Phone No" placeholder="Enter Your Phone Number" required>
         </div>
 
         <div class="input-box">
             <label >Date of Birth </label>
-            <input type="date"  name="Name" placeholder="dd-mm-yyyy" required>
+            <input type="date"  name="Date of Birth" placeholder="dd-mm-yyyy" required>
         </div>
 
         <div class="input-box">
             <label > Create Password </label>
-            <input  type="password"   name="Passsword" placeholder="Passsword" id="password" required>
+            <input  type="password"   name="Password" placeholder="Passsword" id="password" required>
         </div>
 
         
@@ -48,7 +48,7 @@
 
         <div class="input-box">
             <label >Conform Password </label>
-            <input type="password" id="conform-password" name="Name" placeholder="Conform Passsword" required>
+            <input type="password" id="conform-password" name="Conform password" placeholder="Conform Passsword" required>
 
             <p id="massege"></p>
 
@@ -85,11 +85,11 @@
                 <div class="select-box">
                     <select name="Courses" >
                         <option hidden>Courses</option>
-                        <option name="Class" >Master Of Arts</option>
-                        <option name="class" >Bachlor of Arts</option>
-                        <option name="class" >Higher Secondery</option>
-                        <option name="class" >Secondary Bord of Education</option>
-                        <option name="class"> Other Not is Here</option>
+                        <option name="Courses" >Master Of Arts</option>
+                        <option name="Courses" >Bachlor of Arts</option>
+                        <option name="Courses" >Higher Secondery</option>
+                        <option name="Courses" >Secondary Bord of Education</option>
+                        <option name="Courses"> Other Not is Here</option>
                     </select>
                 </div>
                 <input type="text" name="City" placeholder="Enter Your City" required>
@@ -103,18 +103,18 @@
             </div>
 
             <div class="input-box">
-                <label >Massege Your Problem </label>
+                <label>Massege Your Problem </label>
                 <input type="text"  name="Problem" placeholder="Type Your Problem here..">
 
             <div class="colum">
                 <div class="select-box">
                     <select name="Skilles" required>
                         <option hidden>Skilles</option>
-                        <option name="Class" >Doing Editing</option>
-                        <option name="class" > Qualyfy Player </option>
-                        <option name="class" >NSS</option>
-                        <option name="class" >Marcating</option>
-                        <option name="class">Grafic Desingning</option>
+                        <option name="Skilles" >Doing Editing</option>
+                        <option name="Skilles" > Qualyfy Player </option>
+                        <option name="Skilles" >NSS</option>
+                        <option name="Skilles" >Marcating</option>
+                        <option name="Skilles">Grafic Desingning</option>
                         <option name="Skilles">Coading</option>
                         <option name="Skilles">Not a Skill</option>
 
@@ -161,13 +161,11 @@
                 if(password == conformPassword){
                     massege.textContent ="Passwords match";
                     massege.style.backgroundColor = "#3ae374";
-                    password.style.borderColor = "1px solid green";
                     
                 }
                 else{
                     massege.textContent = "Password don't match";
                     massege.style.backgroundColor = "#ff4d4d";
-                    password.style.borderColor = "1px solid #ff4d4d";
                 }
             }
         }
