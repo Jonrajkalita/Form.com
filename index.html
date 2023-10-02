@@ -15,37 +15,43 @@
 
             <div class="colum">
         <div class="input-box">
-            <label >Fast Name: </label>
-            <input type="text"  name="Name" placeholder="Enter Your Name" required>
+            <label >First Name: </label>
+            <input type="text"  name="Name" placeholder="Enter Your First Name" required>
         </div>
         <div class="input-box">
             <label >Last Name: </label>
-            <input type="text"  name="Name" placeholder="Enter Your Name" required>
+            <input type="text"  name="Name" placeholder="Enter Your Last Name" required>
         </div>
         </div>
         <div class="input-box">
             <label >Email: </label>
-            <input type="text"  name="Name" placeholder="Enter Your Name" required>
+            <input type="email"  name="Name" placeholder="Enter Your Email" required>
         </div>
         <div class="column">
         <div class="input-box">
             <label >Phone No: </label>
-            <input type="text"  name="Name" placeholder="Enter Your Name" required>
+            <input type="number"  name="Name" placeholder="Enter Your Phone Number" required>
         </div>
 
         <div class="input-box">
-            <label >Date of Birth</label>
-            <input type="date"  name="Name" placeholder="Enter Your Name" required>
+            <label >Date of Birth </label>
+            <input type="date"  name="Name" placeholder="dd-mm-yyyy" required>
         </div>
 
         <div class="input-box">
-            <label > Create Password</label>
-            <input type="password"  name="Passsword" placeholder="Passsword" required>
+            <label > Create Password </label>
+            <input  type="password"   name="Passsword" placeholder="Passsword" id="password" required>
         </div>
 
+        
+        <input type="checkbox" onclick="myFunction()"> Show Passsword
+
         <div class="input-box">
-            <label >Conform Password</label>
-            <input type="text"  name="Name" placeholder="Conform Passsword" required>
+            <label >Conform Password </label>
+            <input type="password" id="conform-password" name="Name" placeholder="Conform Passsword" required>
+
+            <p id="massege"></p>
+
         </div>
         </div>
 
@@ -73,11 +79,11 @@
 
 
         <div class="input-box address">
-            <label >Address</label>
+            <label >Address </label>
             <input type="text" name="Address" placeholder="Address" required>
             <div class="colum">
                 <div class="select-box">
-                    <select name="Courses" id="">
+                    <select name="Courses" >
                         <option hidden>Courses</option>
                         <option name="Class" >Master Of Arts</option>
                         <option name="class" >Bachlor of Arts</option>
@@ -97,12 +103,12 @@
             </div>
 
             <div class="input-box">
-                <label >Massege Your Problem</label>
+                <label >Massege Your Problem </label>
                 <input type="text"  name="Problem" placeholder="Type Your Problem here.." required>
 
             <div class="colum">
                 <div class="select-box">
-                    <select name="Skilles" id="" required>
+                    <select name="Skilles" required>
                         <option hidden>Skilles</option>
                         <option name="Class" >Doing Editing</option>
                         <option name="class" > Qualyfy Player </option>
@@ -120,8 +126,8 @@
 
 
                 <div class="input-box">
-                    <label >About Yourself</label>
-                    <input type="text"  name="About" placeholder="Write Some Text about Your.." required>
+                    <label >About Yourself </label>
+                    <input type="text"  name="About" placeholder="Write Some Text about Your..">
                 </div>
 
 
@@ -129,11 +135,42 @@
             
     
 
-        <button type="submit" name="submit" >Submit</button>
+        <button type="submit" value="submit" onclick="checkPassword()" name="submit" >Submit</button>
         
             </form>
 
     </section>
-    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password"){
+                x.type = "text";
+            }else{
+                x.type = "password"
+            }
+        }
+
+
+
+        function checkPassword(){
+            let password = document.getElementById("password").value;
+            let conformPassword = document.getElementById("conform-password").value;
+            let massege = document.getElementById("massege")
+
+            if(password.length != 0){
+                if(password == conformPassword){
+                    massege.textContent ="Passwords match";
+                    massege.style.backgroundColor = "#3ae374";
+                    password.style.borderColor = "1px solid green";
+                    
+                }
+                else{
+                    massege.textContent = "Password don't match";
+                    massege.style.backgroundColor = "#ff4d4d";
+                    password.style.borderColor = "1px solid #ff4d4d";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
