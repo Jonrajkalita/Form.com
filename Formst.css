@@ -171,6 +171,18 @@ body{
    margin-left: 5px;
  }
 
+
+ /* loading Style */
+#preloader{
+         background: #e7e0e0 url(preloader.gif) no-repeat center center;
+         background-size: 20%;
+         height: 100vh;
+         width: 100%;
+         position: absolute;
+         top: 0px;
+         z-index: 100;
+ }
+
   /* Rasponsive */
   @media screen and (max-width: 500px) {
     .form .colum{
@@ -187,6 +199,10 @@ body{
 
     span{
       font-size: 0.7rem;
+    }
+
+    #preloader{
+      background-size: 20%;
     }
     
  }
