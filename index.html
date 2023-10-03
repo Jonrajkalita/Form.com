@@ -14,7 +14,7 @@
     <section class="container">
 
         <header>Registation Form</header>
-        <form method="post" action="https://script.google.com/macros/s/AKfycbxDfZZWkU_qhR0rJPK7EumVTiV9vsUrN4-usFgJP6n-s-PwZTH_h5ke8BEYbV9a3P1A/exec" name="google-sheet" class="form">
+        <form method="post" action="" name="google-sheet" class="form">
             <div class="colum">
         <div class="input-box">
             <label >First Name: </label>
@@ -150,7 +150,7 @@
         loader.style.display = "none"
       })
 
-      
+
         function myFunction() {
             var x = document.getElementById("password");
             if (x.type === "password"){
@@ -179,6 +179,17 @@
                 }
             }
         }
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxDfZZWkU_qhR0rJPK7EumVTiV9vsUrN4-usFgJP6n-s-PwZTH_h5ke8BEYbV9a3P1A/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks Register form Data Succesfully Send To Database...."))
+        .catch(error => console.error('Error', error.message))
+})
     </script>
 </body>
 </html>
