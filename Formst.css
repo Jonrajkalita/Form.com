@@ -165,6 +165,12 @@ body{
     background-color: rgb(110, 103, 240);
  }
 
+ span{
+   color: #333;
+   font-size: 0.9rem;
+   margin-left: 5px;
+ }
+
   /* Rasponsive */
   @media screen and (max-width: 500px) {
     .form .colum{
@@ -173,6 +179,14 @@ body{
     .form :where(.gender-opt, .gender){
         row-gap: 15px;
         
+    }
+
+    .form label, .input-box input {
+      font-size: 14px;
+    }
+
+    span{
+      font-size: 0.7rem;
     }
     
  }
